@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+selectors:
+
+*: this is the "universal selector". Targets all elements on the page and has the lowest priority between selectors.
+
+selectors:   !important > Inline style > # Id >.class > element >*
+
+margin: 0; and padding: 0;: Removes default spacing that browsers apply to elements.
+
+box-sizing: border-box;: Ensures that padding and borders are included within the element's total width and height, which makes layout calculations more predictable.
+
+---------------------
+box models:
+
+Block elements: Take up the full width of their container and start on a new line.<body><main> <dev><ul><ol><li><footer><nav><h1-h6> <p>, use block as their outer display type by default.
+
+Inline elements: Flow within text, don’t break lines, and ignore width/height unless changed.
+Some HTML elements,<a>, <span>, <img>, <em> and <strong> use inline as their outer display type by default.
+
+Inline-block: Behaves like inline but respects width/height—great for buttons and inputs.
+1.occupies only contetn's space
+2.Cause no line-breaks
+3. we can set hight and width
+
+You can override any default using:
+display: block, inline, inline-block, flex, or grid.
+
+-------------------------
+
+Positioning modes: 
+
+1.Noram flow
+position: relative 
+defult positioning 
+element is "in flow"
+elements are simply laid out according to their order in the HTML code.
+
+
+2.Absolute Positioning
+position: abolute
+element is removed from the normal flow: "out of flow"
+no impact on surrounding elements or even over lap them
+we use top, bottom, left, or right to offset the element from its relatively positioned container.
+
+"remeber its reletive to view port, yo should make its parent element reltive so it can know its parent!" 
+
+button {
+  possition: absolute;
+  top: 0;
+  left: 0;
+  bottom: 
+
+----------------------------
+Building layouts:
+
+flexbox:
+modern way of laying out element in a 1-dimentional row without using floats. perfect for component layout.
+
+grid: 
+perfect for page layouts and complex components. tow dimention.
+
+*/
+body {
+  font-family: Vazirmatn;
+  background-color: rgb(253, 253, 253);
+  margin: 0;
+  height: 100vh; /*makes the body fill the viewport height*/
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+}
+
+main {
+  background-color: rgb(185, 184, 184);
+  width: 90%;
+  /* max-width: 500px; */
+  min-width: 300px;
+  height: 50vh;
+  /* margin: 20px auto; */
+  display: flex;
+  justify-content: center; /*horizontaly centers items*/
+  flex-direction: column;
+  gap: 2vh;
+  border-radius: 4vh;
+}
+
+.numberIndicator {
+  width: 95%;
+  height: 7vh;
+  max-height: 475px;
+  min-height: 25px;
+  align-self: center;
+  background-color: rgba(165, 42, 42, 0.877);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center; /*horizontaly centers items*/
+  align-items: center; /*vertically puts items in center! */
+}
+
+.card-counters {
+  width: 95%;
+  align-self: center;
+  /* background-color: blanchedalmond; */
+  flex-direction: row;
+  display: flex;
+  justify-content: center; /*horizontaly centers items*/
+  align-items: center; /*vertically puts items in center! */
+  gap: 3%;
+}
+
+.buttons {
+  width: 95%;
+  height: 7vh;
+  max-height: 475px;
+  min-height: 25px;
+  border-radius: 30px;
+  /* background-color: blueviolet; */
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*vertically puts items in center! */
+  gap: 15px;
+}
+
+.mainResetButton {
+  background-color: #bc0505;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mainSaveButton {
+  background-color: #04aa6d;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.inputfield {
+  background-color: #313131;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 50%;
+  /* cursor: pointer; */
+}
+
+.card {
+  /*Men,Wemen and childs*/
+  width: 30%;
+  height: 25vh;
+  max-height: 220px;
+  min-height: 155px;
+  border-radius: 25px;
+  background-color: rgb(58, 57, 58);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card h3,
+p {
+  color: azure;
+}
+.card-counters button {
+  /* background-color: #04aa6d; */
+  /* border: 2px solid rgb(255, 255, 255); */
+  border-radius: 50px;
+  /* color: rgb(35, 35, 35); */
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.cardResetButton {
+  color: #bc0505;
+  border: 2px solid #bc0505;
+}
+.cardResetButton:hover {
+  background-color: #bc0505;
+  /* border: 2px solid rgb(255, 255, 255); */
+  color: azure;
+}
+.cardSaveButton {
+  color: #044caa;
+  border: 2px solid #044caa;
+}
+.cardSaveButton:hover {
+  background-color: #044caa;
+  /* border: 2px solid rgb(255, 255, 255); */
+  color: azure;
+}
+
+.savedresults {
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>test</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="darkLightToggle"></div>
+      <div class="numberIndicator">
+        <h1 id="sumOfAllIndicator">0</h1>
+      </div>
+      <div class="card-counters">
+        <div class="men card">
+          <h3>Men</h3>
+          <p id="menAmountIndicator">amount indicator</p>
+          <div class="card-buttons">
+            <button
+              class="cardResetButton"
+              id="menResetButton"
+              onclick="menReset()"
+            >
+              Reset
+            </button>
+            <button
+              class="cardAddButton"
+              id="menAddButton"
+              onclick="menIncrement()"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+        <div class="women card">
+          <h3>Women</h3>
+          <p id="womenAmountIndicator">amount indicator</p>
+          <div class="card-buttons">
+            <button
+              class="cardResetButton"
+              id="womenResetButton"
+              onclick="womenReset()"
+            >
+              Reset
+            </button>
+            <button
+              class="cardSaveButton"
+              id="womenAddButton"
+              onclick="womenIncrement()"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+        <div class="childs card">
+          <h3>Childs</h3>
+          <p id="childsAmountIndicator">amount indicator</p>
+          <div class="card-buttons">
+            <button
+              class="cardResetButton childResetButton"
+              onclick="childsReset()"
+            >
+              Reset
+            </button>
+            <button
+              class="cardSaveButton childAddButton"
+              onclick="childsIncrement()"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="mainResetButton">Reset</button>
+        <input class="inputfield" type="text" placeholder="Session name" />
+        <button class="mainSaveButton">Save</button>
+      </div>
+      <!-- <div class="savedResult"></div> -->
+      <footer></footer>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
